@@ -1,0 +1,2123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1158</width>
+    <height>1544</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/newPrefix/Background.png);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/newPrefix/Background.png);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QScrollArea" name="full_page_scroll">
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1124</width>
+         <height>1480</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0,1,0,0">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="logo_layout">
+          <item>
+           <widget class="QLabel" name="logo">
+            <property name="minimumSize">
+             <size>
+              <width>135</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>135</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/newPrefix/FaceAI-Logo.png);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../images/images.qrc">:/newPrefix/FaceAI-Logo.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="header_layout" stretch="0,0,1,0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="0,2">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>55</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>55</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/newPrefix/icon-back2.png);
+background-size: cover;
+background-repeat: no-repeat;
+background-color: rgb(127, 0, 226);
+border-radius: 10px;
+border: 1px solid white;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>FaceAI Probe Report Preview</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="full_form_layout">
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <property name="bottomMargin">
+           <number>15</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1">
+            <property name="leftMargin">
+             <number>15</number>
+            </property>
+            <property name="topMargin">
+             <number>15</number>
+            </property>
+            <property name="rightMargin">
+             <number>15</number>
+            </property>
+            <property name="bottomMargin">
+             <number>15</number>
+            </property>
+            <item>
+             <layout class="QFormLayout" name="formLayout">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="rowWrapPolicy">
+               <enum>QFormLayout::DontWrapRows</enum>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;
+</string>
+                </property>
+                <property name="text">
+                 <string>Probe ID:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_51">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;</string>
+                </property>
+                <property name="text">
+                 <string>Probe result:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;</string>
+                </property>
+                <property name="text">
+                 <string>Time of report generation:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="label_54">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;</string>
+                </property>
+                <property name="text">
+                 <string>Case number</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="label_55">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;</string>
+                </property>
+                <property name="text">
+                 <string>Examiner's no.:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLabel" name="label_56">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;</string>
+                </property>
+                <property name="text">
+                 <string>Examiner's name:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QLabel" name="label_57">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_7">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);
+background:none;</string>
+                </property>
+                <property name="text">
+                 <string>Remarks:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QLabel" name="label_53">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="label_52">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+border: 1px solid rgb(53, 132, 228);
+color: white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4" stretch="2,0">
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-image: url(:/newPrefix/icon-avatar.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 10px;
+</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>The subject photo has matched to the following target photos. Respective facial recognition similarity scores are attached herewith.</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_19">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255)</string>
+              </property>
+              <property name="text">
+               <string>Keep First</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-radius: 10px;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_20">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255)</string>
+              </property>
+              <property name="text">
+               <string>matched photos</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #005ae2;
+border-radius: 10px;
+color: white;</string>
+              </property>
+              <property name="text">
+               <string>Go</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>450</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>1350</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1090</width>
+             <height>965</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="scroll_layout_widget">
+            <item>
+             <layout class="QVBoxLayout" name="report_layout">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+              <property name="bottomMargin">
+               <number>20</number>
+              </property>
+              <item>
+               <layout class="QVBoxLayout" name="report_result_layout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <property name="spacing">
+                   <number>50</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>10</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>30</number>
+                  </property>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0">
+                      <item>
+                       <widget class="QLabel" name="label_11">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>350</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">image: url(:/newPrefix/Cross.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 20px
+</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QFormLayout" name="formLayout_3">
+                        <property name="horizontalSpacing">
+                         <number>0</number>
+                        </property>
+                        <property name="verticalSpacing">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_12">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Similarity Score: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QLabel" name="label_13">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>94.7% (Highest Match)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="label_123">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Case Number: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="label_14">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_15">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>PS: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_16">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0">
+                      <property name="spacing">
+                       <number>3</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_17">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>350</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">image: url(:/newPrefix/Cross.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 20px</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QFormLayout" name="formLayout_2">
+                        <property name="horizontalSpacing">
+                         <number>0</number>
+                        </property>
+                        <property name="verticalSpacing">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_18">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Similarity Score: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QLabel" name="label_21">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>94.7% (Highest Match)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="947HighestMatchLabel">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Case Number: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="label_22">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_23">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>PS: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_24">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_10" stretch="0,0">
+                      <property name="spacing">
+                       <number>3</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_25">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>350</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">image: url(:/newPrefix/Cross.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 20px</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QFormLayout" name="formLayout_4">
+                        <property name="labelAlignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="formAlignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="horizontalSpacing">
+                         <number>0</number>
+                        </property>
+                        <property name="verticalSpacing">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_26">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Similarity Score: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QLabel" name="label_27">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>94.7% (Highest Match)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="947HighestMatchLabel_3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Case Number: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="label_28">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_29">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>PS: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_30">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <property name="spacing">
+                   <number>50</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>30</number>
+                  </property>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,0">
+                      <property name="spacing">
+                       <number>3</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_31">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>350</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">image: url(:/newPrefix/Cross.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 20px;</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QFormLayout" name="formLayout_5">
+                        <property name="horizontalSpacing">
+                         <number>0</number>
+                        </property>
+                        <property name="verticalSpacing">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_32">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Similarity Score: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QLabel" name="label_33">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>94.7% (Highest Match)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="947HighestMatchLabel_4">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Case Number: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="label_34">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_35">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>PS: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_36">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_13">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,0">
+                      <property name="spacing">
+                       <number>3</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_37">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>350</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">image: url(:/newPrefix/Cross.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 20px;</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QFormLayout" name="formLayout_6">
+                        <property name="horizontalSpacing">
+                         <number>0</number>
+                        </property>
+                        <property name="verticalSpacing">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_38">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Similarity Score: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QLabel" name="label_39">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>94.7% (Highest Match)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="947HighestMatchLabel_5">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Case Number: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="label_40">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_41">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>PS: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_42">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_15">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_16" stretch="0,0">
+                      <property name="spacing">
+                       <number>3</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_43">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>350</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">image: url(:/newPrefix/Cross.png);
+background-color: #34557a;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+border-radius: 20px</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QFormLayout" name="formLayout_7">
+                        <property name="horizontalSpacing">
+                         <number>0</number>
+                        </property>
+                        <property name="verticalSpacing">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_44">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Similarity Score: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QLabel" name="label_45">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>94.7% (Highest Match)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="947HighestMatchLabel_6">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>Case Number: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="label_46">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_47">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string>PS: </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_48">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 255, 255);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="JsonResp_layout" stretch="0,0">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_49">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Facial Recognition JSON results</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1088</width>
+               <height>83</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_21">
+              <item>
+               <widget class="QLabel" name="label_50">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>65</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>65</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(98, 136, 178);
+border-radius: 10px;
+border: 1px solid rgb(53, 132, 228);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="btns_layout" stretch="0,0">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,0,0">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(127, 0, 226);
+border-radius: 10px;
+color: white;
+background-image: url(:/newPrefix/geneate_report.png);
+background-size: cover;
+background-position: center;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_6">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-radius: 10px;
+border: none;
+color: rgb(243, 243, 243);</string>
+              </property>
+              <property name="text">
+               <string>Return to Home</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1158</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../images/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
