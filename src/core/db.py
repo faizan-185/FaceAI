@@ -1,7 +1,7 @@
 import os
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.orm import sessionmaker
-from core.config import conf
+from .config import conf
 
 
 def check_db(path):
