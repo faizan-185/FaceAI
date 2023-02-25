@@ -48,7 +48,7 @@ class Start_Page(QtWidgets.QMainWindow):
 
     def show_Page2(self):
         self.hide()
-
+        self.ui_2.clear()
         self.MainWindow = QtWidgets.QMainWindow()
         self.ui_3.hide()
         # self.ui_2 = Start_Page2()
@@ -59,20 +59,23 @@ class Start_Page(QtWidgets.QMainWindow):
         self.ui_2.showMaximized()
 
     def show_Page3(self):
-        self.hide()
-        self.ui_2.hide()
-        self.ui_5.hide()
-        self.MainWindow = QtWidgets.QMainWindow()
-        # self.ui_3 = Start_Page3()
-        # Click to go page 4 from page 3
-        self.ui_3.pg3_btn1.clicked.connect(self.show_Page4)
-        # Click to go page 1 from page 3
-        self.ui_3.pg3_btn2.clicked.connect(self.show_Page1)
-        # Click to go page 2 from page 3
-        self.ui_3.pg3_btn3.clicked.connect(self.show_Page2)
-        self.ui_3.showMaximized()
+        res = self.ui_2.validate_all()
+        if res:
+            self.hide()
+            self.ui_2.hide()
+            self.ui_5.hide()
+            self.MainWindow = QtWidgets.QMainWindow()
+            # self.ui_3 = Start_Page3()
+            # Click to go page 4 from page 3
+            self.ui_3.pg3_btn1.clicked.connect(self.show_Page4)
+            # Click to go page 1 from page 3
+            self.ui_3.pg3_btn2.clicked.connect(self.show_Page1)
+            # Click to go page 2 from page 3
+            self.ui_3.pg3_btn3.clicked.connect(self.show_Page2)
+            self.ui_3.showMaximized()
 
     def show_Page4(self):
+        print(self.ui_2.case_number.text())
         self.ui_3.hide()
         self.MainWindow = QtWidgets.QMainWindow()
         self.ui_4.showMaximized()
