@@ -3,6 +3,6 @@ import os
 
 class Config:
   DB_PATH: str = f"{os.getcwd()}/FaceAI"
-  PICKLE_PATH: str = f"{os.getcwd()}/Lisences.pickle"
+  LISENCES_PATH: str = f"{os.getcwd()}/Lisences.txt"
 
 conf = Config()
