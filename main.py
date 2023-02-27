@@ -1,10 +1,11 @@
 from src.crud import readLisences, isLocked, matchLisence, removeLisence, updateData, insertData
 from src.core.config import conf
 from src.core.db import session, settings_table
+from src.similarity import runner
 
 if __name__ == "__main__":
     if not isLocked(session=session, table=settings_table):
-        print("ok")
+        runner()
     else:
         license_key = input("Enter License Key: ")
         licenses = readLisences(conf.LISENCES_PATH)

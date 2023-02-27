@@ -120,7 +120,6 @@
             <property name="font">
              <font>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -151,6 +150,12 @@ background: none;</string>
              <string notr="true">background-color: #3E536A;
 color: rgb(255, 255, 255);</string>
             </property>
+            <property name="inputMethodHints">
+             <set>Qt::ImhLatinOnly</set>
+            </property>
+            <property name="maxLength">
+             <number>14</number>
+            </property>
            </widget>
           </item>
           <item row="1" column="0">
@@ -164,7 +169,6 @@ color: rgb(255, 255, 255);</string>
             <property name="font">
              <font>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -195,6 +199,9 @@ background: none;</string>
              <string notr="true">background-color: #3E536A;
 color: rgb(255, 255, 255);</string>
             </property>
+            <property name="maxLength">
+             <number>31</number>
+            </property>
            </widget>
           </item>
           <item row="2" column="0">
@@ -208,7 +215,6 @@ color: rgb(255, 255, 255);</string>
             <property name="font">
              <font>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -239,6 +245,9 @@ background: none;</string>
              <string notr="true">background-color: #3E536A;
 color: rgb(255, 255, 255);</string>
             </property>
+            <property name="maxLength">
+             <number>63</number>
+            </property>
            </widget>
           </item>
           <item row="3" column="0">
@@ -252,7 +261,6 @@ color: rgb(255, 255, 255);</string>
             <property name="font">
              <font>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -283,6 +291,9 @@ background: none;</string>
              <string notr="true">background-color: #3E536A;
 color: rgb(255, 255, 255);</string>
             </property>
+            <property name="maxLength">
+             <number>20</number>
+            </property>
            </widget>
           </item>
           <item row="4" column="0">
@@ -296,7 +307,6 @@ color: rgb(255, 255, 255);</string>
             <property name="font">
              <font>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -327,6 +337,9 @@ background: none;</string>
              <string notr="true">background-color: #3E536A;
 color: rgb(255, 255, 255);</string>
             </property>
+            <property name="maxLength">
+             <number>139</number>
+            </property>
            </widget>
           </item>
           <item row="5" column="1">
@@ -345,44 +358,54 @@ color: rgb(255, 255, 255);</string>
          </layout>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
           <item>
-           <widget class="QLabel" name="label_8">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize">
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>65</height>
+             </size>
+            </property>
+            <property name="sizeIncrement">
              <size>
               <width>0</width>
               <height>0</height>
              </size>
             </property>
-            <property name="maximumSize">
-             <size>
-              <width>350</width>
-              <height>350</height>
-             </size>
+            <property name="toolTip">
+             <string>Upload</string>
             </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
             </property>
             <property name="styleSheet">
-             <string notr="true">background: none;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string/>
             </property>
-            <property name="pixmap">
-             <pixmap resource="../images/images.qrc">:/newPrefix/Group 68.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+            <property name="iconSize">
+             <size>
+              <width>65</width>
+              <height>65</height>
+             </size>
             </property>
            </widget>
           </item>
