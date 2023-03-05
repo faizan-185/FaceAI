@@ -162,6 +162,9 @@ border-radius:15px;</string>
     </item>
     <item alignment="Qt::AlignHCenter|Qt::AlignTop">
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: transparent;
 margin: 10px;
@@ -179,7 +182,6 @@ margin: 10px;
        </property>
        <property name="font">
         <font>
-         <weight>50</weight>
          <bold>false</bold>
         </font>
        </property>
@@ -242,7 +244,20 @@ background: none;</string>
            <property name="topMargin">
             <number>20</number>
            </property>
-           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="styleSheet">
+              <string notr="true">color: white;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLabel" name="label_2">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -250,34 +265,73 @@ background: none;</string>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>300</height>
-              </size>
-             </property>
              <property name="maximumSize">
               <size>
-               <width>300</width>
-               <height>500</height>
+               <width>16777215</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="text">
               <string/>
              </property>
-             <property name="pixmap">
-              <pixmap resource="../images/images.qrc">:/newPrefix/Group 68.png</pixmap>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
             </widget>
            </item>
           </layout>
          </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>65</width>
+            <height>65</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Upload</string>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../images/upload.png</normaloff>../images/upload.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>65</width>
+            <height>65</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -366,7 +420,6 @@ background: none;</string>
                <property name="font">
                 <font>
                  <pointsize>12</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -474,7 +527,6 @@ background: none;</string>
                <property name="font">
                 <font>
                  <pointsize>12</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -516,7 +568,6 @@ background: none;</string>
           <property name="font">
            <font>
             <pointsize>14</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -712,7 +763,6 @@ color: rgba(255, 255, 255,0.6);
       <property name="font">
        <font>
         <pointsize>13</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -759,7 +809,6 @@ color: rgba(255, 255, 255,0.6);
       </property>
       <property name="font">
        <font>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>

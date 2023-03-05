@@ -2,6 +2,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+import images
 
 
 def show_critical_messagebox(message):
