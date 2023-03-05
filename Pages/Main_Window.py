@@ -6,14 +6,16 @@ import images
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+
 from Page2_load import Start_Page2
 from page3_load import Start_Page3
 from Page7_load import Start_Page7
 from Page4_load import Start_Page4
 from Page5_load import Start_Page5
 from Page6_load import Start_Page6
-BASE_PATH = os.path.abspath(os.getcwd())
 
+BASE_PATH = os.path.abspath(os.getcwd())
+# from src.similarity import runner
 
 class Start_Page(QtWidgets.QMainWindow):
     def __init__(self):
@@ -25,6 +27,7 @@ class Start_Page(QtWidgets.QMainWindow):
 
         self.ui_2 = Start_Page2()
         self.ui_3 = Start_Page3()
+        # self.ui_3.showMaximized()
         self.ui_4 = Start_Page4()
         self.ui_5 = Start_Page5()
         self.ui_6 = Start_Page6()
@@ -75,11 +78,12 @@ class Start_Page(QtWidgets.QMainWindow):
             self.ui_3.showMaximized()
 
     def show_Page4(self):
-        print(self.ui_2.case_number.text())
-        self.ui_3.hide()
-        self.MainWindow = QtWidgets.QMainWindow()
-        self.ui_4.showMaximized()
-        QTimer.singleShot(2000, self.show_Page5)
+        if self.ui_3.validate():
+            self.ui_3.hide()
+            self.MainWindow = QtWidgets.QMainWindow()
+            self.ui_4.showMaximized()
+            runner()
+
 
     def show_Page5(self):
         self.ui_4.hide()
@@ -102,8 +106,6 @@ class Start_Page(QtWidgets.QMainWindow):
         self.ui_6.pg6_btn2.clicked.connect(self.show_Page1)
         self.ui_6.showMaximized()
 
-
-
     def show_Page7(self):
         self.hide()
         self.ui_4.hide()
@@ -113,11 +115,8 @@ class Start_Page(QtWidgets.QMainWindow):
         self.ui_7.showMaximized()
 
 
+if __name__ == "__main__":
 
-
-
-
-
-app = QtWidgets.QApplication(sys.argv)
-window = Start_Page()
-app.exec_()
+    app = QtWidgets.QApplication(sys.argv)
+    window = Start_Page()
+    app.exec_()
