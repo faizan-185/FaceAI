@@ -1,5 +1,5 @@
 import cv2
-from insightface.app import FaceAnalysis
+from .insightface.app import FaceAnalysis
 
 
 def get_similarity(faceApp, img1, img2):
@@ -16,12 +16,12 @@ def get_similarity(faceApp, img1, img2):
 
 
 def runner():
-    app = FaceAnalysis(name="antelopev2", root="/home/anonymous/Documents/FaceAI_GUI_PyQT/",
+    app = FaceAnalysis(name="antelopev2", root="E:\\Data\\Pycharm Projects\\FaceAI\\FaceAI\\src\\",
                        providers=['CUDAExecutionProvider', 'CPUExecutionProvider'],
                        allowed_modules=['detection', 'recognition'])
     app.prepare(ctx_id=0, det_size=(640, 640))
-    img = cv2.imread("/home/anonymous/Documents/FaceAI_GUI_PyQT/models/1.jpg")
-    img2 = cv2.imread("/home/anonymous/Documents/FaceAI_GUI_PyQT/models/3.jpg")
+    img = cv2.imread("E:/Data/Pycharm Projects/FaceAI/FaceAI/test/image1.jpg")
+    img2 = cv2.imread("E:/Data/Pycharm Projects/FaceAI/FaceAI/test/trump.jpg")
     print("\n")
     get_similarity(faceApp=app, img1=img, img2=img2)
     print("\n")
