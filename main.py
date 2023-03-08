@@ -5,11 +5,12 @@ import platform, subprocess, re, os
 from src.AES256 import AES256
 from src.core.config import conf
 import ntplib as ntp
-from datetime import date
+from datetime import datetime, timezone, date
 from dateutil.relativedelta import relativedelta
 import socket
 import struct
 import time
+
 
 
 def getProcessor_batch_serial_info(cmd):
@@ -33,7 +34,7 @@ def getNtpTime():
     if data:
         t = struct.unpack('!12I', data)[10]
         t -= REF_TIME_1970
-    return time.ctime(t), t
+    return datetime.utcfromtimestamp(t).date()
 
 
 def encryptFile(aes=AES256(), filePath=str):

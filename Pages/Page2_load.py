@@ -16,7 +16,7 @@ def show_critical_messagebox(message):
 class Start_Page2(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.window = uic.loadUi("UI_Designs/Page_2.ui", self)
+        self.window = uic.loadUi("/Users/abbas-ali/Desktop/This Mac/D Drive/Practise Projects/PycharmProjects/FaceAI/FaceAI/UI_Designs/Page_2.ui", self)
         self.case_number = self.findChild(QLineEdit, "probe_idLineEdit_3")
         self.ps = self.findChild(QLineEdit, "probe_idLineEdit_4")
         self.examiner_name = self.findChild(QLineEdit, "probe_idLineEdit_5")

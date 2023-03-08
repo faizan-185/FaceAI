@@ -12,6 +12,8 @@ from Page7_load import Start_Page7
 from Page4_load import Start_Page4
 from Page5_load import Start_Page5
 from Page6_load import Start_Page6
+from src.similarity import runner
+
 BASE_PATH = os.path.abspath(os.getcwd())
 
 
@@ -19,7 +21,9 @@ class Start_Page(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.window = uic.loadUi("UI_Designs/Page_1.ui", self)
+        self.window = uic.loadUi(
+            "/Users/abbas-ali/Desktop/This Mac/D Drive/Practise Projects/PycharmProjects/FaceAI/FaceAI/UI_Designs/Page_1.ui",
+            self)
         self.btn1 = self.findChild(QtWidgets.QPushButton, "CreateCase")
         self.pg1_btn2 = self.findChild(QtWidgets.QPushButton, "ProbeText")
 
@@ -84,6 +88,7 @@ class Start_Page(QtWidgets.QMainWindow):
     def show_Page5(self):
         self.ui_4.hide()
         self.ui_6.hide()
+        runner()
         self.MainWindow = QtWidgets.QMainWindow()
         # Click to go page 6 from page 5
         self.ui_5.pg5_btn1.clicked.connect(self.show_Page6)
@@ -102,8 +107,6 @@ class Start_Page(QtWidgets.QMainWindow):
         self.ui_6.pg6_btn2.clicked.connect(self.show_Page1)
         self.ui_6.showMaximized()
 
-
-
     def show_Page7(self):
         self.hide()
         self.ui_4.hide()
@@ -111,11 +114,6 @@ class Start_Page(QtWidgets.QMainWindow):
         # Click to go page 1 from page 7
         self.ui_7.pg7_btnhome.clicked.connect(self.show_Page1)
         self.ui_7.showMaximized()
-
-
-
-
-
 
 
 app = QtWidgets.QApplication(sys.argv)

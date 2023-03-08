@@ -10,5 +10,5 @@ class Start_Page7(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.window = uic.loadUi("UI_Designs/Page_7.ui", self)
+        self.window = uic.loadUi("/Users/abbas-ali/Desktop/This Mac/D Drive/Practise Projects/PycharmProjects/FaceAI/FaceAI/UI_Designs/Page_7.ui", self)
         self.pg7_btnhome = self.findChild(QPushButton, "pushButton")
