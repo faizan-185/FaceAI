@@ -5,6 +5,7 @@ from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import scrypt
 from Crypto.Hash import SHA3_512
+from src.core.config import conf
 
 
 class AES256:
@@ -86,6 +87,26 @@ class AES256:
         #self.shred_file(input_file_path)
         os.remove(input_file_path)
 
+    def encrypt_key_data(self, key, passwd, salt,data):
+        hashed_passwd = SHA3_512.new(data=passwd.encode('utf-8'))
+        hashed_passwd.update(salt)
+        hashed_passwd = hashed_passwd.digest()
+
+        output_file = open(conf.ENCRYPTED_DB_PATH, 'wb')
+
+        cipher_encrypt = AES.new(key, AES.MODE_CFB)
+
+        output_file.write(salt)  # 32 bytes
+        output_file.write(cipher_encrypt.iv)  # 16 bytes
+        output_file.write(hashed_passwd)  # 64 bytes
+
+        # Progress bar
+        ciphered_bytes = cipher_encrypt.encrypt(data)
+        output_file.write(ciphered_bytes)
+        output_file.close()
+        return True
+
+
     def encrypt(self, passwd, input_file_path):
         print("Generating key from password...")
         salt = self.generate_salt()
@@ -93,6 +114,16 @@ class AES256:
 
         print(f"Encrypting {input_file_path}")
         self.encrypt_key(key, passwd, salt, input_file_path)
+        self.print_green("File is encrypted.")
+
+        return True
+
+    def encryptData(self, passwd,data):
+        print("Generating key from password...")
+        salt = self.generate_salt()
+        key = self.generate_AES256_key(passwd, salt)
+
+        self.encrypt_key(key, passwd, salt)
         self.print_green("File is encrypted.")
 
         return True
@@ -115,7 +146,7 @@ class AES256:
         pbar.update(len(buffer))
         while len(buffer) > 0:
             decrypted_bytes = cipher_decrypt.decrypt(buffer)
-            decrypted_Content+=decrypted_bytes
+            decrypted_Content += decrypted_bytes.decode("utf-8")
             buffer = input_file.read(self.buffer_size)
             pbar.update(len(buffer))
 
@@ -123,16 +154,8 @@ class AES256:
         return decrypted_Content
 
     def decrypt(self, passwd, input_file_path):
-        print("Checking password...")
         if not self.check_password(passwd, input_file_path):
             return False
-
-        print("Generating key from password...")
         salt = self.get_salt_from_file(input_file_path)
         key = self.generate_AES256_key(passwd, salt)
-
-        print(f"Decrypting {input_file_path}")
-        self.decrypt_key(key, input_file_path)
-        self.print_green("File is decrypted.")
-
-        return True
+        return self.decrypt_key(key, input_file_path)

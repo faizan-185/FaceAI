@@ -1,23 +1,21 @@
 from sqlalchemy import select, update, insert
 
 
-def isLocked(session, table):
-    query = select(table).where(table.columns[0] == "Locked")
-    result = session.execute(query).first()
-    return result is not None and result[1] == "Yes"
+def isLocked(session):
+    result = session['Locked']
+    return result is not None and result == "Yes"
 
 
-def isLicenseExpired(session, table, date):
-    query = select(table).where(table.columns[0] == "ExpirationDate")
-    result = session.execute(query).first()
-    updateData(session=session, table=table, key="Locked", value="Yes")
-    return result is not None and result[1] < date
+def isLicenseExpired(session, date):
+    result = session['ExpirationDate']
+    if result <= date and result == '':
+        updateData(session=session, key="Locked", value="Yes")
+    return result is not None and result < date
 
 
-def isSerialNoSame(session, table, serialNo):
-    query = select(table).where(table.columns[0] == "SerialNumber")
-    result = session.execute(query).first()
-    return result is not None and result[1] == serialNo
+def isSerialNoSame(session, serialNo):
+    result = session['SerialNumber']
+    return result is not None and result == serialNo
 
 
 def readLisences(path):
@@ -50,13 +48,11 @@ def matchLisence(lisences, my_lisence):
         exit()
 
 
-def updateData(session, table, key, value):
-    query = update(table).where(table.columns[0] == "Locked").values((key, value))
-    session.execute(query)
-    session.commit()
+def updateData(session, key, value):
+    session[key] = value
+    return True
 
 
-def insertData(session, table, data):
-    query = insert(table).values(data)
-    session.execute(query)
-    session.commit()
+def insertData(session, key, value):
+    session[key] = value
+    return True

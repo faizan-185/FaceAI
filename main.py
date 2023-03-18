@@ -1,16 +1,14 @@
-from src.crud import readLisences, isLocked, matchLisence, removeLisence, updateData, insertData, isSerialNoSame, isLicenseExpired
-from src.core.db import session, settings_table
+from src.crud import readLisences, isLocked, matchLisence, removeLisence, updateData, insertData, isSerialNoSame, \
+    isLicenseExpired
 from src.similarity import runner
 import platform, subprocess, re, os
 from src.AES256 import AES256
 from src.core.config import conf
-import ntplib as ntp
+from src.core.db import conn
 from datetime import datetime, timezone, date
 from dateutil.relativedelta import relativedelta
 import socket
 import struct
-import time
-
 
 
 def getProcessor_batch_serial_info(cmd):
@@ -34,7 +32,8 @@ def getNtpTime():
     if data:
         t = struct.unpack('!12I', data)[10]
         t -= REF_TIME_1970
-    return datetime.utcfromtimestamp(t).date()
+        return datetime.utcfromtimestamp(t).date()
+    return datetime.now()
 
 
 def encryptFile(aes=AES256(), filePath=str):
@@ -57,6 +56,13 @@ def encryptFile(aes=AES256(), filePath=str):
                 aes.encrypt(password, filename)
         return True
     return False
+
+
+def encrypt_data(aes=AES256(), data=str):
+    password = aes.read_password(conf.PASS_PATH)
+    if not password:
+        raise ValueError("Password File is not Correct")
+    return aes.encryptData(password, data=data)
 
 
 def getExpirationDate(today):
@@ -93,7 +99,7 @@ if __name__ == "__main__":
     ntpDateTime = getNtpTime()
     aes = AES256()
     if not os.path.exists(conf.ENCRYPTED_LICENSE_PATH) and os.path.exists(conf.LISENCES_PATH):
-        conf.IS_ENCRYPTED = encryptFile(aes=AES256, filePath=conf.LISENCES_PATH)
+        conf.IS_LICENSE_ENCRYPTED = encryptFile(aes=AES256, filePath=conf.LISENCES_PATH)
     else:
         print("Licenses File Missing or Manipulated Exiting Application!")
     if not conf.IS_ENCRYPTED:
@@ -104,8 +110,9 @@ if __name__ == "__main__":
         processor_dict = getProcessor_batch_serial_info("get-wmiobject win32_baseboard")
         processor_serial_no = 0 if processor_dict['SerialNumber'] == '' else int(processor_dict['SerialNumber'])
 
-        if isLocked(session=session, table=settings_table) and isSerialNoSame(session=session, table=settings_table,
-                                                                              serialNo=processor_serial_no) and isLicenseExpired(ntpDateTime):
+        if isLocked(session=conn) and isSerialNoSame(session=conn,
+                                                     serialNo=processor_serial_no) and isLicenseExpired(session=conn,
+                                                                                                        date=ntpDateTime):
             runner()
         else:
             license_key = input("Enter License Key: ")
@@ -113,10 +120,12 @@ if __name__ == "__main__":
             result = matchLisence(lisences=licenses, my_lisence=license_key)
             if result:
                 removeLisence(path=conf.LISENCES_PATH, lisences=licenses, my_lisence="abcd")
-                updateData(session=session, table=settings_table, key="Locked", value="No")
-                insertData(session=session, table=settings_table, data=("validity time", "one year"))
-                insertData(session=session, table=settings_table, data=("SerialNumber", processor_serial_no))
-                insertData(session=session, table=settings_table, data=("ExpirationDate", getExpirationDate(today=ntpDateTime)))
+                updateData(session=conn, key="Locked", value="No")
+                insertData(session=conn, data=("SerialNumber", processor_serial_no))
+                insertData(session=conn,
+                           data=("ExpirationDate", getExpirationDate(today=ntpDateTime)))
+                encrypt_data(aes=aes, data=str(conn))
+                runner()
             else:
                 print("Incorrect License Key or Expired License key or Not same SerialNo")
     else:
