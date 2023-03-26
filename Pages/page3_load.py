@@ -25,8 +25,8 @@ class Start_Page3(QMainWindow):
 
         self.target_img = self.findChild(QLabel, "label_2")
         self.selection = self.findChild(QLabel, "label_3")
-        pixmap = QPixmap("/images/select.png")
-        pixmap = pixmap.scaled(250, 250, aspectRatioMode=Qt.KeepAspectRatio)
+        pixmap = QPixmap("/home/anonymous/Documents/FaceAI_GUI_PyQT/images/select.png")
+        pixmap = pixmap.scaled(200, 150, aspectRatioMode=Qt.KeepAspectRatio)
         self.target_img.setPixmap(pixmap)
         self.target_img.setStyleSheet("border-radius: 20px")
 
@@ -88,6 +88,8 @@ class Start_Page3(QMainWindow):
                 pixmap = pixmap.scaled(100, 100, aspectRatioMode=Qt.KeepAspectRatio)
                 self.target_img.setPixmap(pixmap)
                 self.selection.setText(f"Picked folder:  '  {self.selected_file[0].split('/')[-1]}  '")
+        print(self.selected_option)
+        print(self.selected_file)
 
     def validate(self):
         if len(self.selected_file) == 0 or self.selected_option is None:

@@ -139,7 +139,6 @@ border: 1px solid white;</string>
           <property name="font">
            <font>
             <pointsize>18</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -160,6 +159,9 @@ border: 1px solid white;</string>
        <widget class="QScrollArea" name="scrollArea">
         <property name="widgetResizable">
          <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
         <widget class="QWidget" name="scrollAreaWidgetContents">
          <property name="geometry">
@@ -220,6 +222,9 @@ border: 1px solid white;</string>
                     <pointsize>14</pointsize>
                    </font>
                   </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">color: rgb(255, 255, 255);</string>
                   </property>
@@ -248,8 +253,12 @@ border: 1px solid white;</string>
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;</string>
                   </property>
                  </widget>
                 </item>
@@ -284,7 +293,9 @@ border: 1px solid white;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;
+</string>
                   </property>
                  </widget>
                 </item>
@@ -319,7 +330,8 @@ border: 1px solid white;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;</string>
                   </property>
                  </widget>
                 </item>
@@ -354,7 +366,8 @@ border: 1px solid white;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;</string>
                   </property>
                  </widget>
                 </item>
@@ -389,7 +402,8 @@ border: 1px solid white;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;</string>
                   </property>
                  </widget>
                 </item>
@@ -424,7 +438,8 @@ border: 1px solid white;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;</string>
                   </property>
                  </widget>
                 </item>
@@ -459,7 +474,8 @@ border: 1px solid white;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: #3E536A;</string>
+                   <string notr="true">background-color: #3E536A;
+color: white;</string>
                   </property>
                  </widget>
                 </item>
@@ -469,6 +485,12 @@ border: 1px solid white;</string>
                <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,0">
                 <item>
                  <widget class="QLabel" name="label_8">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -477,8 +499,8 @@ border: 1px solid white;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
-                    <height>300</height>
+                    <width>350</width>
+                    <height>350</height>
                    </size>
                   </property>
                   <property name="styleSheet">
@@ -544,6 +566,61 @@ border-radius: 10px;
              </widget>
             </item>
            </layout>
+          </item>
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(127, 0, 226);
+border-radius: 10px;
+color: white;
+background-image: url(:/newPrefix/geneate_report.png);
+background-size: cover;
+background-position: center;</string>
+            </property>
+            <property name="text">
+             <string>Generate Report</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="pushButton_2">
